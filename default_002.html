@@ -1,0 +1,598 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+<meta name="alexaVerifyID" content="lCN_7w2wJiz9-FMfv_wqnIfBQXI">
+<title>为之漫笔 » 本博客专注于Web前后端技术、移动平台开发技术和技术翻译。</title>
+
+
+
+<link rel="pingback" href="http://www.cn-cuckoo.com/wordpress/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="为之漫笔 » Feed" href="http://www.cn-cuckoo.com/feed">
+<link rel="alternate" type="application/rss+xml" title="为之漫笔 » 评论 Feed" href="http://www.cn-cuckoo.com/comments/feed">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cn-cuckoo.com/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.cn-cuckoo.com/wordpress/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="为之漫笔" href="http://www.cn-cuckoo.com/">
+<meta name="generator" content="WordPress 2.9.2">
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="1bit.js"></script>
+<script type="text/javascript">
+oneBit = new OneBit('http://www.cn-cuckoo.com/wordpress/wp-content/plugins/1bit/1bit.swf');
+oneBit.ready(function() {
+oneBit.specify('background', 'FFFFFF');
+oneBit.specify('playerSize', '10');
+oneBit.specify('position', 'after');
+oneBit.apply('a');
+});
+</script>
+
+<script type="text/javascript" src="coolcode.js"></script>
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://www.cn-cuckoo.com/wordpress/wp-content/plugins/social-dropdown/dropie.css" />
+<![endif]-->
+<script type="text/javascript" src="dropdown.js"></script><script type="text/javascript" src="yuiloader-dom-event.js"></script><link rel="stylesheet" type="text/css" href="default_002.css" media="all"></head><body class="home blog"><div class="dropmenudiv" id="dropmenudiv" style="visibility: hidden; width: 300px;" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"></div>
+
+<div class="dropmenudiv" id="dropmenudiv" style="visibility: hidden; width: 300px;" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"></div>
+	
+
+
+<div id="wrap">
+<!-- 本站提示 -->
+<div id="sitenote" style="border: 1px solid rgb(221, 221, 221); margin: 1em; padding: 1em; background: rgb(238, 238, 238) none repeat scroll 0% 0%; display: none; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: rgb(51, 51, 51);"><strong>特别提示：</strong>由于目前正在抓紧时间翻译<a style="color: rgb(3, 78, 162);" href="http://www.amazon.com/dp/047022780X/"><em>Professional JavaScript, 2nd</em></a>，预计春节之前没有时间<a href="http://www.cn-cuckoo.com/2009/11/16/translating-thesis-of-hakon-wium-lie-1270.html">翻译CSS之父的论文</a>了。对自己，也对大家，更对“CSS之父”说声抱歉吧！
+</div> 
+<!-- 本站提示 -->
+<div id="contentwrapper">
+<div id="content">
+	<div class="navigation">
+		<div class="alignleft"><a href="http://www.cn-cuckoo.com/page/2">« 看看更早的</a></div>
+		<div class="alignright"></div>
+	</div>
+		
+	<div class="post-1530 post hentry category-programming category-translation" id="post-1530">
+		<div class="entrytitle">
+			<h2><a href="http://www.cn-cuckoo.com/2010/04/20/are-you-one-of-the-10-percent-of-programmers-who-can-write-a-binary-search-1530.html" rel="bookmark" title="点击查看 你是那10%可以实现二分查找算法的程序员吗？">你是那10%可以实现二分查找算法的程序员吗？</a></h2> 
+			<h3>2010年04月20日  <a href="http://www.cn-cuckoo.com/category/programming" title="查看 编程技术 的全部文章" rel="category tag">编程技术</a>,  <a href="http://www.cn-cuckoo.com/category/translation" title="查看 翻译 的全部文章" rel="category tag">翻译</a></h3>
+		</div>
+
+		<div class="entrybody">
+			<p style="font-size: 24px;">——《编程珠玑》引发的编程竞赛</p>
+<p style="text-align: right;">原文链接：<a title="Are you one of the 10% of programmers who can write a binary search?" href="http://reprog.wordpress.com/2010/04/19/are-you-one-of-the-10-percent/" target="_top">http://reprog.wordpress.com/2010/04/19/are-you-one-of-the-10-percent/</a><br><a title="Mike Taylor" href="http://reprog.wordpress.com/about/" target="_top">迈克·泰勒（Mike Taylor）</a>，2010年4月19日<br>翻译完成：2010年4月20日</p>
+<p>有一些讲编程的图书，我会从头到尾、一字不落地反复研读；还有一些讲编程的图书，我已经看过好几遍了，但每次差不多都是只看其中的一章。乔恩·本特利（Jon Bentley）1986年的经典名著《编程珠玑》（<em>Programming Pearls</em>）则是少数几本能同时归入上述两类的编程图书之一，我手里这本书的封面已经严重磨损，下图可以为证（点击看大图，注意左下角。——译者注）。</p>
+<p><a href="http://reprog.files.wordpress.com/2010/04/programming-pearls-first-edition.jpeg"><img class="aligncenter" title="Programming Pearls, First Edition" src="programming-pearls-first-edition.jpeg" alt="" height="299" width="198"></a></p>
+<p>（我有这本书的第1版[<a title="http://www.amazon.com/exec/obidos/ASIN/0201103311/thedinosaurrea0a" href="http://www.amazon.com/exec/obidos/ASIN/0201103311/thedinosaurrea0a" target="_top">amazon.com</a>，<a title="http://www.amazon.co.uk/exec/obidos/ASIN/0201103311/thedinosaurreadi" href="http://www.amazon.co.uk/exec/obidos/ASIN/0201103311/thedinosaurreadi" target="_top">amazon.co.uk</a>]，上面就是扫描的这一版的封面，好像我该买一本又新又便宜的第2版了<a title="http://www.amazon.com/exec/obidos/ASIN/0201657880/thedinosaurrea0a" href="http://www.amazon.com/exec/obidos/ASIN/0201657880/thedinosaurrea0a" target="_top">[amazon.com</a>，<a title="http://www.amazon.co.uk/exec/obidos/ASIN/0201657880/thedinosaurreadi" href="http://www.amazon.co.uk/exec/obidos/ASIN/0201657880/thedinosaurreadi" target="_top">amazon.co.uk</a>]，第2版比第1版多了3章内容。）</p>
+<p>我打算最近再专门写一篇关于这本书的文章（我已经为<em><a title="http://reprog.wordpress.com/2010/03/01/programming-books-part-1-coders-at-work/" href="http://reprog.wordpress.com/2010/03/01/programming-books-part-1-coders-at-work/" target="_top">Coders at Work</a>、<a title="http://reprog.wordpress.com/2010/03/06/programming-books-part-2-the-elements-of-programming-style/" href="http://reprog.wordpress.com/2010/03/06/programming-books-part-2-the-elements-of-programming-style/" target="_top">The Elements of Programming Style</a></em>、<em><a title="http://reprog.wordpress.com/2010/03/12/programming-books-part-3-programming-the-commodore-64/" href="http://reprog.wordpress.com/2010/03/12/programming-books-part-3-programming-the-commodore-64/" target="_top">Programming the Commodore 64 </a></em>和<a title="http://reprog.wordpress.com/2010/04/06/programming-books-part-4-the-c-programming-language/" href="http://reprog.wordpress.com/2010/04/06/programming-books-part-4-the-c-programming-language/" target="_top"><em>The C Programming Language</em></a>专门写了几篇书评），但今天我只想就这本书中的几段话谈谈自己的想法。这几段内容有点骇人听闻。</p>
+<h2>只有10%的程序员可以写出二分查找</h2>
+<p>每次翻开《编程珠玑》，我都会先看一看下面这几段文字：</p>
+<div style="border-left: 3px solid rgb(221, 221, 221); margin-left: 20px; padding-left: 20px;">
+<p>二分查找可以解决（预排序数组的查找）问题：只要数组中包含T（即要查找的值），那么通过不断缩小包含T的范围，最终就可以找到它。一开始，范围覆盖整个数组。将数组的中间项与T进行比较，可以排除一半元素，范围缩小一半。就这样反复比较，反复缩小范围，最终就会在数组中找到T，或者确定原以为T所在的范围实际为空。对于包含N个元素的表，整个查找过程大约要经过log(2)N次比较。</p>
+<p>多数程序员都觉得只要理解了上面的描述，写出代码就不难了；但事实并非如此。如果你不认同这一点，最好的办法就是放下书本，自己动手写一写。试试吧。</p>
+<p>我在贝尔实验室和IBM的时候都出过这道考题。那些专业的程序员有几个小时的时间，可以用他们选择的语言把上面的描述写出来；写出高级伪代码也可以。考试结束后，差不多所有程序员都认为自己写出了正确的程序。于是，我们花了半个钟头来看他们编写的代码经过测试用例验证的结果。几次课，一百多人的结果相差无几：90%的程序员写的程序中有bug（我并不认为没有bug的代码就正确）。</p>
+<p>我很惊讶：在足够的时间内，只有大约10%的专业程序员可以把这个小程序写对。但写不对这个小程序的还不止这些人：高德纳在《计算机程序设计的艺术 第3卷 排序和查找》第6.2.1节的“历史与参考文献”部分指出，虽然早在1946年就有人将二分查找的方法公诸于世，但直到1962年才有人写出没有bug的二分查找程序。</p>
+<div style="text-align: right;">——乔恩·本特利，《编程珠玑（第1版）》第35-36页</div>
+</div>
+<p>几个小时！90%！老兄，严肃点！难道这还不够<strong>骇人听闻</strong>吗？</p>
+<p>之所以想看这本书的第2版，原因之一就是想看看这几段文字有没有修订过，看看从1986年到1999年出第2版，这个数字有没有变化。直觉告诉我，这个数字一定向好的方向变化了，事物都是向好的方向发展的嘛。但理性却告诉我，在一个<a title="http://reprog.wordpress.com/2010/03/03/whatever-happened-to-programming/" href="http://reprog.wordpress.com/2010/03/03/whatever-happened-to-programming/" target="_top">程序员把更多的时间都花在摆弄库上</a>，而不是编写实际代码的时代，重现核心算法的能力即使有也一定会弱化。别忘了，本特利提到的那些家伙可都不是等闲之辈，他们都是贝尔实验室和IBM的专业人员。所以，我们有理由相信他们的成绩实际上已经是最好的了。</p>
+<p><a href="http://reprog.files.wordpress.com/2010/04/gari.jpg"><img class="aligncenter" src="gari.jpg" alt="" height="241" width="292"></a></p>
+<h2>好，下面就做一个二分查找的测验</h2>
+<p>我跟你一样（如果你是这么想的），想马上就试一试。（好啦，不是马上。先看完这篇文章！）我相信看这篇文章的人都知道什么是二分查找算法，即使你不知道，上面引用的本特利的描述也应该够了。请你打开编辑器，编写一个二分查找例程。什么时候觉得没有任何问题了，保留那个版本。然后测试，然后通过在下面留言的方式告诉我你是不是第一次就做对了。我们肯定能打破本特利10%的纪录吗？</p>
+<p>规则如下。</p>
+<ol>
+<li>使用你喜欢的任何编程语言。</li>
+<li>不要剪切粘贴或以任何方式复制别人的代码。甚至在你写完之前，都不要参考其他的二分查找代码。</li>
+<li>甚至于我不得不强调，别调用bsearch()，或使用其他瞒天过海的手法 <img src="icon_smile.gif" alt=":-)" class="wp-smiley"> </li>
+<li>时间自己来定：5分钟不短——只要你能保证写完写对；8小时不长——只要你愿意（而且有那么多闲工夫）。</li>
+<li>可以使用编译器消除一些无意识的错误，如语法错误或变量初始化失败，但……</li>
+<li>在确定程序正确之前<strong>不要测试</strong>。</li>
+<li>最后，也是最重要的：如果决定参与这次测验，就必须报告。成功也好，失败也罢，甚至半途而废也要给我个话儿。否则，就无法保证测验结果的准确性了。</li>
+</ol>
+<p>（考虑到这只是一次测验，可以忽略计算索引时导致的数值溢出。<a href="http://googleresearch.blogspot.com/2006/06/extra-extra-read-all-about-it-nearly.html">这里描述了相应的情形</a>，但打算参加这次测验的人在编完程序之前不要看，因为那篇文章里包含一个正确的二分查找的实现，想洁身自好的朋友一定是不屑为之的。）</p>
+<p>如果你的代码经验证确实正确，那么如果你愿意的话，欢迎你在留言里贴出自己的代码。不过，假如你这样做了，而后来的留言给你挑出了bug，请你一定想好怎样为维护自己的形象而自圆其说 <img src="icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
+<p>更酷的玩法：对于那些信心十足的人，如果你真敢肯定自己的程序没有问题，可以先把代码贴在留言里，然后再测试。当然，你必须要在留言里说明这一点，以便大家发现你的bug时，会考虑多少给你留些情面。</p>
+<p>我会在某个时间总结一下这次测试的结果——比如说，一周以后。</p>
+<p>行动吧！</p>
+<p><a href="http://reprog.files.wordpress.com/2010/04/19980-wasabi.jpg"><img class="aligncenter" src="19980-wasabi.jpg" alt="" height="332" width="346"></a></p>
+<h2>第一次更新（一个半小时后）</h2>
+<p>感谢朋友们的积极响应，这么快就有那么多留言！我得提醒大家，WordPress的留言系统会解释HTML，因此会吞掉类似下面的代码段</p>
+<p>if a[mid] &lt; value</p>
+<p>最好的办法就是把源代码放在{source}…{source}标签之间，注意用方括号代替这里的花括号。（我第一次想告诉大家这一点时，使用的是方括号，结果我写的规避标记的说明，反而被当成了标记——悲哀呀！）这样做还可以保留缩进，否则我还不知道有什么办法可以做到这一点。</p>
+<p>替WordPress向大家致歉：我真的希望这个平台允许留言者预览留言和/或在发表后还能编辑留言，这样就可以避免出现乱七八糟的代码了。我也想了办法自己动手解决这个问题，但WordPress不仅会错误地显示带有&lt;符号的代码，它实际上会丢弃该符号后面的所有内容，唉，我想我是没折了。</p>
+<h2>第二次更新（在原文章发表4个小时后）</h2>
+<p>哈哈，你们这些家伙太出人意料了。仅仅4个小时，这篇文章的留言数就超过了以前的一篇文章保持的纪录（<a href="http://reprog.wordpress.com/2010/03/03/whatever-happened-to-programming/">Whatever Happened to Programming</a>此时的留言有206条）。</p>
+<p>如果想看到相关的更多讨论，<a href="http://news.ycombinator.com/item?id=1277459">Hacker News中有不少不错的留言</a>，另外<a href="http://www.reddit.com/r/programming/comments/bt7nh/according_to_jon_bentleys_book_programming_pearls/">Reddit的留言质量虽然差一点</a>，但也值得一看。这些讨论把实际地编写代码看成只有精英程序员才会干的事。</p>
+<div style="border: 1px dashed rgb(221, 221, 221); padding: 10px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;">
+译后记：看了几眼，能认出来的加上认不出来的：C、PHP、Ruby、Python、Common Lisp、VB.NET 、C#、Java、Javascript、Delphi、Haskell、Scheme、Clojure、Perl、Smalltalk、FORTRAN、Lua、Objective-C、ColdFusion……各种各样语言的实现齐聚一堂。
+<p>有心人<a href="http://reprog.wordpress.com/2010/04/19/are-you-one-of-the-10-percent/#comment-1995">乔尔·甘勒（Joe Ganley）对前100个留言作了统计</a>，结果如下：</p>
+<p>Python 40<br>
+C/C++ 36<br>
+Unknown/pseudocode 6<br>
+Lisp/Clojure/Scheme 5<br>
+PHP 4<br>
+Three each: Java, Perl, C#, JavaScript<br>
+Haskell 2<br>
+One each: VB, Delphi, Smalltalk, FORTRAN, Lua, Objective-C, ColdFusion</p>
+<p>Conclusion: Almost everyone (who cares about implementing binary search, anyway) uses C/C++ or Python.</p>
+<p>PS：专注前端开发的程序员们，可以参考《JavaScript高级程序设计》的作者Nicholas C. Zakas使用JavaScript实现的一些基本算法，链接地址如下<a href="http://www.nczonline.net/blog/tag/computer-science/">http://www.nczonline.net/blog/tag/computer-science/</a>。其中，对本文提到的二分查找算法的实现如下：</p>
+<div class="hl-surround"><ol class="hl-main ln-show" title="双击隐藏行号" ondblclick="linenumber(this)"><li class="hl-firstline">//Copyright 2009 Nicholas C. Zakas. All rights reserved.</li>
+<li>//MIT-Licensed, see source file</li>
+<li>function binarySearch(items, value){</li>
+<li>&nbsp;</li>
+<li>&nbsp;&nbsp; &nbsp;var startIndex&nbsp; = 0,</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;stopIndex&nbsp; &nbsp;= items.length - 1,</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;middle&nbsp; &nbsp; &nbsp; = Math.floor((stopIndex + startIndex)/2);</li>
+<li>&nbsp;</li>
+<li>&nbsp;&nbsp; &nbsp;while(items[middle] != value &amp;&amp; startIndex &lt; stopIndex){</li>
+<li>&nbsp;</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;//adjust search area（调整查找范围）</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;if (value &lt; items[middle]){</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stopIndex = middle - 1;</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;} else if (value &gt; items[middle]){</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;startIndex = middle + 1;</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</li>
+<li>&nbsp;</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;//recalculate middle（重新计算中项索引）</li>
+<li>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;middle = Math.floor((stopIndex + startIndex)/2);</li>
+<li>&nbsp;&nbsp; &nbsp;}</li>
+<li>&nbsp;</li>
+<li>&nbsp;&nbsp; &nbsp;//make sure it's the right value（确保返回正确的值）</li>
+<li>&nbsp;&nbsp; &nbsp;return (items[middle] != value) ? -1 : middle;</li>
+<li>}</li></ol></div>
+</div>
+											</div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+			<a href="http://www.cn-cuckoo.com/2010/04/20/are-you-one-of-the-10-percent-of-programmers-who-can-write-a-binary-search-1530.html#comments" class="commentmeta" title="你是那10%可以实现二分查找算法的程序员吗？ 上的评论">有 6 条评论</a> 		</div>
+		</div>
+	</div>
+
+	
+	<div class="post-1521 post hentry category-authorship category-30" id="post-1521">
+		<div class="entrytitle">
+			<h2><a href="http://www.cn-cuckoo.com/2010/04/18/two-problems-with-android-developin-1521.html" rel="bookmark" title="点击查看 Android开发问题二则">Android开发问题二则</a></h2> 
+			<h3>2010年04月18日  <a href="http://www.cn-cuckoo.com/category/authorship" title="查看 原创 的全部文章" rel="category tag">原创</a>,  <a href="http://www.cn-cuckoo.com/category/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91" title="查看 移动开发 的全部文章" rel="category tag">移动开发</a></h3>
+		</div>
+
+		<div class="entrybody">
+			<p>配置完Android开发环境后，遇到两个问题，一个属于非技术问题，另一个属于技术问题。</p>
+<p><strong>先说非技术问题。</strong></p>
+<p>很简单，启动Android模拟器（需要先创建AVD）时，先看到的是一个文本界面，我一开始以为自己的配置出了什么问题。迷惑了大半天，晚上从外面吃饭回来，突然想起来<a href="http://www.china-pub.com/196136" target="_bland">《Android基础教程》（人民邮电出版社，2009年11月）</a>中有一段提示：“启动模拟器需要花较长时间。可以这样想象一下——首次开机时，手机也需要启动，就像任何计算机系统一样。关闭模拟器就像是关闭手机或取出手机电池一样。”会不会是我太着急了？应该有点耐心才好。于是，我重新启动模拟器，耐心等待……大约3分钟后，终于看到Android的图形用户界面，OK。</p>
+<p>正好<a href="http://www.amazon.com/dp/1430226293" target="_top">《Beginning Android 2》</a>这本书中也有一段相关的话：NOTE: The first time you use an AVD with the emulator, it will take substantially longer to start than it will subsequent times.（注意：第一次使用AVD来启动模拟器的时间会比较长，后续的启动速度会有所提升。）</p>
+<p><strong>再说技术问题。</strong></p>
+<p>前面只是解决了启动模拟器的问题，接下来就是要在模拟器中实际地加载新应用程序并进行测试。但是，我新创建了FirstApp应用程序，在通过Eclipse运行该项目时（也可以在命令行中使用ant构建项目，然后运行android命令，再启动模拟器；不过，这需要再下载其他软件包），提示出错，错误信息如下：</p>
+<p>1. Project “FirstApp” is missing required source folder: ‘gen’<br>
+2. The project could not be built until buid path errors are resolved.</p>
+<p>在网上搜索到几个解决方案（列在下面，供朋友们参考）。但奇怪的是，在刚搜索到第一个方案时，还没等到采取任何措施，Eclipse中的错误居然自动消失了（FirstApp项目下方的红叉也不见了），再Run as Android Application，一切正常了。我想，也许正如第三个方案中某人所说的，Eclipse并不能实时检测到OS文件系统的变化（编译项目时，会生成新文件），这也许就是导致这个技术问题的原因——至于是不是这个原因，还有待于进一步求证。</p>
+<p>一、右击项目，选择preferences-&gt;builder，在右边的configure一栏中将Android Packege Builder一项提到Java Builer之前<br>
+出处：<a title="http://www.androidin.net/bbs/thread-708-11-1.html" href="http://www.androidin.net/bbs/thread-708-11-1.html" target="_top">http://www.androidin.net/bbs/thread-708-11-1.html</a></p>
+<p>二、将Eclipse自动生成的R.java删掉，刷新项目，R.java便会重新生成<br>
+出处：<a title="http://www.blogjava.net/crazycoding/archive/2010/03/27/316701.html" href="http://www.blogjava.net/crazycoding/archive/2010/03/27/316701.html" target="_top">http://www.blogjava.net/crazycoding/archive/2010/03/27/316701.html</a></p>
+<p>三、在项目文件夹中新创建一个Java类或者直接修改自动生成的类文件<br>
+出处：<a title="http://www.coderanch.com/t/466092/Android/Mobile/android-eclipse" href="http://www.coderanch.com/t/466092/Android/Mobile/android-eclipse" target="_top">http://www.coderanch.com/t/466092/Android/Mobile/android-eclipse</a></p>
+<p>以下是几个人的回复，感觉这种讨论的技术氛围很不错。今天太晚了，<span style="text-decoration: line-through;">明天</span>天亮还要去平谷，回来再翻译。</p>
+<p>James Dixon的回复<br>
+Hi Divya<br>
+I’ve had the same problem as well. I think the issue is that the project creation does not initiate a build when it finishes, so you need to make a change, and save for it to generate the gen folder.<br>
+For me creating a new java class seemed to do the trick, but I’d imagine just making a change to a file and saving should work too.</p>
+<p>Robert F. Howard的回复<br>
+I just ran into this, too. I am following the example in Hello Android, which I assume is what the others in this thread were doing. James’s solution (editing the source file) worked for me, so thank you for that.<br>
+So your solution is good, but I don’t think I totally believe the diagnosis. The thing is, the directory actually did exist before I edited the file and rebuilt. This is my first time using Eclipse, and it’s very disappointing. The error message should specify the full path of the directory it wants, and then it should be possible to create the directory and re-build, but it doesn’t work until the source file is edited. It makes me wonder what is really going on inside Eclipse.</p>
+<p>Tim Holloway的回复<br>
+This seems to be a small glitch courtesy of Eclipse’s distancing itself from the OS filesystem (which is why Eclipse has an explicit Refresh command).<br>
+The gen folder and the “R.java” file are built by one of the Android utilities. The Eclipse Android plugin invokes this app, but it doesn’t always know when it needs to. I have similar problems when I want to define a new resource ID. Since I can’t seem to get the GUI resource ID definer to enable itself, I just create new IDs in the resource files themselves. But unless I trigger the android resource generator, they don’t get inserted into “R.java”.<br>
+And you don’t want to manually insert into “R.java”, because when the resource compiler does fire off, your code mods will be overwritten.<br>
+One way to force the issue is to select the Project/Clean menu command. If you have the automatic build switched off, you’ll then have to initiate a build. Otherwise the clean will fire off the auto-build process.</p>
+											</div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+			<a href="http://www.cn-cuckoo.com/2010/04/18/two-problems-with-android-developin-1521.html#respond" class="commentmeta" title="Android开发问题二则 上的评论">还没有评论</a> 		</div>
+		</div>
+	</div>
+
+	
+	<div class="post-1512 post hentry category-authorship category-30" id="post-1512">
+		<div class="entrytitle">
+			<h2><a href="http://www.cn-cuckoo.com/2010/04/18/make-a-android-develop-environment-1512.html" rel="bookmark" title="点击查看 构建Android开发环境">构建Android开发环境</a></h2> 
+			<h3>2010年04月18日  <a href="http://www.cn-cuckoo.com/category/authorship" title="查看 原创 的全部文章" rel="category tag">原创</a>,  <a href="http://www.cn-cuckoo.com/category/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91" title="查看 移动开发 的全部文章" rel="category tag">移动开发</a></h3>
+		</div>
+
+		<div class="entrybody">
+			<p>在本文写作时，Android SDK的最新版本是2.1。现在，我们来看一看如何在Windows平台下构建Android 2.1开发环境。</p>
+<p>先期需要下载的软件包如下：</p>
+<p><strong>1、JDK 1.6+</strong><br>
+<strong>2、Android SDK 1.6</strong><br>
+<strong>3、Android SDK Setup</strong><br>
+<strong>4、Eclipse IDE for Java Developers</strong></p>
+<p>看到这些，可能心急的朋友会禁不住问：“不是要构建Android 2.1开发环境吗？怎么还要下载Android SDK 1.6而不是2.1呢？”</p>
+<p>没错，是要讲怎么构建Android 2.1开发环境。但是，经过几次尝试，我发现直接下载安装Android SDK 2.0和2.1有问题。什么问题？简单地说，就是这两个最新版本的SDK包中都不包含adb.exe文件，无法在Eclipse中指定Android SDK的位置（也就意味着没法使用Eclipse来开发）。因此，这才走了一条曲线救国的道路；也许，正如我自己的尝试所证实的：Android SDK 2.0和2.1实际上都是升级包，而不是完整的开发包。我比较了一下，Android SDK 2.0和2.1的大小分别是76.6MB和77.3MB，而Android SDK 1.6的大小则是248MB，相差还是很悬殊的，这一点似乎也佐证了我的判断。但是，不管怎样，先下载Android SDK 1.6，然后再通过ADT（Android Developer Tools，Android开发人员工具）和Android SDK Setup程序来下载和更新Android SDK 2.0和2.1，是成功了。</p>
+<p>闲话少说，言归正传。</p>
+<p>首先，访问<a title="http://java.sun.com/javase/downloads/widget/jdk6.jsp" href="http://java.sun.com/javase/downloads/widget/jdk6.jsp" target="_top">http://java.sun.com/javase/downloads/widget/jdk6.jsp</a><br>
+<strong>下载Java SE Development Kit 6u20（jdk-6u20-windows-i586.exe）</strong><br>
+文件大小76.67 MB。</p>
+<p>其次，访问<a title="http://dl.google.com/android/archives/android-sdk-windows-1.6_r1.zip" href="http://dl.google.com/android/archives/android-sdk-windows-1.6_r1.zip" target="_top">http://dl.google.com/android/archives/android-sdk-windows-1.6_r1.zip</a><br>
+<strong>下载Android SDK 1.6（android-sdk-windows-1.6_r1.zip）</strong><br>
+文件大小248M。</p>
+<p>然后，访问<a title="http://dl.google.com/android/android-sdk_r04-windows.zip" href="http://dl.google.com/android/android-sdk_r04-windows.zip" target="_top">http://dl.google.com/android/android-sdk_r04-windows.zip</a><br>
+<strong>下载Android SDK Setup（android-sdk_r04-windows.zip）</strong><br>
+文件大小22MB。</p>
+<p>最后，访问<a title="http://www.eclipse.org/downloads/" href="http://www.eclipse.org/downloads/" target="_top">http://www.eclipse.org/downloads/</a><br>
+<strong>下载Eclipse IDE for Java Developers（eclipse-java-galileo-SR2-win32.zip）</strong><br>
+文件大小92.7MB。</p>
+<p>下载完成后，开始安装和配置。</p>
+<p><strong>第一步，安装和配置JDK。</strong></p>
+<p>下载后，双击运行jdk-6u20-windows-i586.exe，假设选择安装到C:\Java\jdk1.6.0_20目录下（当然，安装到默认路径下也没有问题）。安装完毕后，就是配置环境变量。步骤如下：</p>
+<p>(1)设置JAVA路径</p>
+<p>在“我的电脑”上点右键，选“属性”，打开“系统属性”对话框，点“高级”选项卡，再点“环境变量”按钮，在打开的对话框中的“系统变量”下方，点“新建”，然后在对话框中的“变量名”中填JAVA_HOME，在“变量值”中填C:\Java\jdk1.6.0_20，点“确定”。</p>
+<p>(2)设置CLASS路径</p>
+<p>再“新建”一个系统变量，在“变量名”中填CLASSPATH，在“变量值”中填.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar。<br>
+说明：最开始的.;中的.（点）表示当前路径，;（分号）是路径分隔符。接下来的%JAVA_HOME%引用的是前面刚创建的JAVA安装路径。</p>
+<p>(3)设置PATH路径</p>
+<p>PATH变量一般都有了，因此选中点“编辑”，然后在“变量值”后面加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin，注意前面的分号。</p>
+<p>这样，JDK就安装好。“开始-&gt;运行”，输入cmd，然后在命令行提示符中输入：java -version，应该能够看到java version “1.6.0_20″信息；JDK安装成功。</p>
+<p><strong>第二步，解压和配置Android SDK 1.6</strong></p>
+<p>将下载到的android-sdk-windows-1.6_r1.zip解压缩到C:\android-sdk-windows-1.6_r1目录中（解压到哪个目录都没有问题）。然后，配置环境变量。步骤如下：</p>
+<p>(1)设置Android路径</p>
+<p>重复第一步的(1)，新建一个“系统变量”，在“变量名”中填Android_Home（大小写没有问题），在“变量值”加填C:\android-sdk-windows-1.6_r1。</p>
+<p>(2)设置PATH路径</p>
+<p>“编辑”PATH变量，在“变量值”后面加上;%Android_Home%\tools，注意前面的分号。</p>
+<p>这样，Android SDK 1.6就安装好了。“开始-&gt;运行”，输入cmd，然后在命令行提示符中输入：android -help，应该能够看到帮助信息；Android SDK 1.6安装成功。</p>
+<p><strong>第三步，解压Eclipse，<span style="color: rgb(255, 0, 0);">关联Android SDK</span>，安装ADT</strong></p>
+<p>将下载到的eclipse-java-galileo-SR2-win32.zip解压缩到C:\eclipse，然后进入这个文件夹，双击eclipse.exe，启动Eclipse。</p>
+<p>关联Adnroid SDK：菜单“Windows-&gt;Preferences”，打开Preferences对话框，点击Android，在右侧的Android Reference中，点SDK Location文本框右侧的Browse…按钮，找到C:\android-sdk-windows-1.6_r1，“确定”。</p>
+<p>安装ADT：菜单“Help -&gt; Install New Software…”，打开Install对话框，点击Add…按钮，添加站点（Add Site），在Name中填ADT，在Location中填https://dl-ssl.google.com/android/eclipse/。然后，下载安装ADT。</p>
+<p><strong>第四步，解压Android SDK Setup，下载更新Android SDK 2.0和2.1</strong></p>
+<p>将下载到的android-sdk_r04-windows.zip解压缩到C:\android-sdk-windows，然后进入这个文件夹，双击SDK Setup.exe，启动Android SDK and AVD Manager，选中左侧Settings项，然后在右侧面板选中Force https://… sources to be fetched using http://，然后选择Save &amp; Apply。然后，参见这里的图解：</p>
+<p><strong>如何使用Android SDK Setup? </strong><a title="http://www.android123.com.cn/zhongwensdk/366.html" href="http://www.android123.com.cn/zhongwensdk/366.html" target="_top"> http://www.android123.com.cn/zhongwensdk/366.html</a></p>
+<p>我选择了所有需要更新的内容，包括：</p>
+<ul>
+<li> Android SDK Tools, revision 5</li>
+<li> Documentation for Android SDK, API 7, revision 1</li>
+<li> SDK Platform Android 2.1, API 7 revision 1</li>
+<li> Sapmles for SDK API 7, revision 1</li>
+<li> SDK Platform Android 2.0.1, API 6, revision 1</li>
+</ul>
+<p>耐心等待吧——注意，如果更新过程有提示，可能是因为你正在使用C:\android-sdk-windows-1.6_r1目录，或者杀毒软件不允许改写其中的文件，此时需要退出所有程序或暂时关闭杀毒软件。</p>
+<p>一切顺利的话，到此Android 2.1开发环境（或者说，Android 1.6、2.0和2.1的开发环境）就构建好了。</p>
+<p>附录：</p>
+<p><strong>Android开发包及相关软件下载地址</strong><br>
+<a title="http://www.android123.com.cn/android_kit.html" href="http://www.android123.com.cn/android_kit.html" target="_top">http://www.android123.com.cn/android_kit.html</a></p>
+<p>鸣谢：<strong><a title="http://www.android123.com.cn/" href="http://www.android123.com.cn/" target="_top">http://www.android123.com.cn/</a></strong></p>
+											</div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+			<a href="http://www.cn-cuckoo.com/2010/04/18/make-a-android-develop-environment-1512.html#respond" class="commentmeta" title="构建Android开发环境 上的评论">还没有评论</a> 		</div>
+		</div>
+	</div>
+
+	
+	<div class="post-1493 post hentry category-web category-translation tag-javascript tag-john-resig tag-jquery" id="post-1493">
+		<div class="entrytitle">
+			<h2><a href="http://www.cn-cuckoo.com/2010/04/09/john-resig-on-advanced-javascript-to-improve-your-web-app-1493.html" rel="bookmark" title="点击查看 John Resig谈改进Web应用的高级JavaScript技术[待续]">John Resig谈改进Web应用的高级JavaScript技术[待续]</a></h2> 
+			<h3>2010年04月9日  <a href="http://www.cn-cuckoo.com/category/web" title="查看 Web开发 的全部文章" rel="category tag">Web开发</a>,  <a href="http://www.cn-cuckoo.com/category/translation" title="查看 翻译 的全部文章" rel="category tag">翻译</a></h3>
+		</div>
+
+		<div class="entrybody">
+			<p> <a href="http://www.cn-cuckoo.com/2010/04/09/john-resig-on-advanced-javascript-to-improve-your-web-app-1493.html#more-1493" class="more-link">查看全文 »</a></p>
+						<p>Tags: <a href="http://www.cn-cuckoo.com/tag/javascript" rel="tag">JavaScript</a>, <a href="http://www.cn-cuckoo.com/tag/john-resig" rel="tag">John Resig</a>, <a href="http://www.cn-cuckoo.com/tag/jquery" rel="tag">jQuery</a></p>					</div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+			<a href="http://www.cn-cuckoo.com/2010/04/09/john-resig-on-advanced-javascript-to-improve-your-web-app-1493.html#respond" class="commentmeta" title="John Resig谈改进Web应用的高级JavaScript技术[待续] 上的评论">还没有评论</a> 		</div>
+		</div>
+	</div>
+
+	
+	<div class="post-1436 post hentry category-programming category-translation" id="post-1436">
+		<div class="entrytitle">
+			<h2><a href="http://www.cn-cuckoo.com/2010/03/20/distributed-version-control-is-here-to-stay-baby-1436.html" rel="bookmark" title="点击查看 乔尔谈软件终结篇：分布式版本控制系统的时代到来了">乔尔谈软件终结篇：分布式版本控制系统的时代到来了</a></h2> 
+			<h3>2010年03月20日  <a href="http://www.cn-cuckoo.com/category/programming" title="查看 编程技术 的全部文章" rel="category tag">编程技术</a>,  <a href="http://www.cn-cuckoo.com/category/translation" title="查看 翻译 的全部文章" rel="category tag">翻译</a></h3>
+		</div>
+
+		<div class="entrybody">
+			<div style="margin: 0pt 0pt 10px 10px; padding: 1em; background: rgb(238, 238, 238) none repeat scroll 0% 0%; width: 160px; float: right; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"><strong>译者按</strong>：3月17日，Joel Spolsky在他影响了全球数百万程序员的著名博客<a title="http://www.joelonsoftware.com/" href="http://www.joelonsoftware.com/" target="_top"><strong>Joel on Software</strong></a>中发表了最后一篇文章<a title="http://www.joelonsoftware.com/items/2010/03/17.html" href="http://www.joelonsoftware.com/items/2010/03/17.html" target="_top"><em>Distributed Version Control is here to stay, baby</em></a>。特翻译这篇文章，以为纪念。另外，推荐他的博客文集《<a title="http://www.china-pub.com/196194" href="http://www.china-pub.com/196194" target="_top">软件随想录</a>》（<a title="http://www.amazon.com/More-Joel-Software-Occasionally-Developers/dp/1430209879" href="http://www.amazon.com/More-Joel-Software-Occasionally-Developers/dp/1430209879" target="_top"><em>More Joel on Software</em></a>中文版）。</div>
+<p><a href="http://www.inc.com/uploaded_files/image/2009-CJS-Spolsky-pop_645.jpg" target="_top"><img class=" alignleft" style="margin: 0pt 10px 10px 0pt;" src="2009-cjs-spolsky-bkt_645.jpg" alt="Joel Spolsky is the founder and CEO of Fog Creek Software in New York City." height="170" width="170"></a></p>
+<p>前不久，杰夫、我，还有埃里克一块<a title="Stack Overflow Podcast 36" href="http://blog.stackoverflow.com/2009/01/podcast-36/" target="_top">参加Stack Overflow Podcast的在线聊天</a>。哥几个针对版本控制问题，狠狠地发了一通牢骚。特别是大批特批了以<a title="http://mercurial.selenic.com/" href="http://mercurial.selenic.com/" target="_top">Mercurial</a>和<a title="http://git-scm.com/" href="http://git-scm.com/" target="_top">Git</a>为代表的、新潮的DVCS（Distributed Version Control System，分布式版本控制系统）。</p>
+<p>聊天中，我说：“我觉得，用它们来做分支和合并更简单，恰恰说明了你的同事可能会做更多的分支和合并。结果呢，就是你会把自己绕进去，最后非晕菜不可。”</p>
+<p>说实话，你们也猜得到，参加那种聊天活动，不需要事先准备什么，不过是几个人东拉西扯地闲聊天而已。既然是闲聊天嘛，就免不了说错话，或者用技术术语来说就是——犯错误。要么哪句话里有错误，要么出发点有错误，要么就是出发点和话里都有错误。但这一次，我犯了一个低级错误。就像草莓配比萨、辣椒配面包，属于那种低级得不能再低级的错误。</p>
+<p>在这次聊天之前，我们团队已经切换到Mercurial很长时间了，但这次切换真的把我搞晕了，我不得不花钱请人替我check in代码（开个玩笑）。不过，有一段日子我确实不好过，因为我得记住几个关键的命令，想象着自己是在Subversion中使用它们，期待能看到熟悉的结果。可是，一旦碰到结果跟我想象得不一样，我就会大惑不解。为此，我经常得颠儿颠儿地跑到楼下大房间里，请教本杰明或者雅各布。</p>
+<p>你猜我的团队怎么说，“哎，乔总，这‘水银果汁’<sup><a name="source1" href="#note1">[注1]</a></sup>太神了，我们打算用实际的产品代码来测试一下它。另外，还有，这一点更重要，我们发现了一个大市场，我们可以为它提供有偿技术支持和托管服务。”（Mercurial是基于GPL的自由软件，但有不少公司在决定使用什么之前，总会需要某种支持。）</p>
+<p>我心里想，你们问我，我问谁？你们都知道，我在公司并不真正作主，因为“管理的职能就是提供支持”嘛。然后，他们就把所有6名实习生都组织起来，动手开发<a title="http://www.fogcreek.com/kiln/" href="http://www.fogcreek.com/kiln/" target="_top">基于Mercurial的产品</a>。</p>
+<p>真不能再拖下去了，我必须得尽快弄明白，所谓的“分布式版本控制”到底咋回事。免得我们公司的产品都上市开卖了，人家让我介绍产品，我自己都说不出个子丑寅卯来。那样的话，博客圈里又会有人跳出来，对我指手画脚，说我糟蹋好东西了（junking the sharp）。</p>
+<p>于是，我学呀，学呀，最后终于闹明白了。今天，我想跟大家在这里分享一下。</p>
+<p>在分布式版本控制系统中，所谓的“分布式”其实不是最关键的。</p>
+<p>最关键的是在使用这些系统时，你时刻要想着“更改”，而不是“版本”。</p>
+<p>我明白，这里边其实有几分“道可道，非常道”的意味。在使用传统的版本控制系统时，你会想：嗯，这是版本1，这是版本2，这是版本3。</p>
+<p>而在使用分布式版本控制系统时，其实我不用想版本。我只要想，我做了这些更改，我又做了另一些更改。</p>
+<p>“<a title="Figuring Out What They Expected" href="http://www.joelonsoftware.com/uibook/chapters/fog0000000058.html" target="_top">程序模型</a>”变了，“用户模型”也得跟着变。</p>
+<p>在Subversion中，你可能会想，“要保证我的版本跟主版本随时一致”，或者“恢复到前一个版本”。</p>
+<p>在Mercurial中，你会这样想，“看看雅各布的更改”，或者“我们先不用考虑那些更改”。</p>
+<p>如果你在使用Mercurial时，心里想的是Subversion，多数情况下倒也问题不大；但是，万一出了问题，你就会找不着北、会不高兴，最后因为无计可施而恨上Mercurial。</p>
+<p>可是，如果你能够解放思想，换一个角度来看版本控制，就能悟出管理“版本”与管理“变更”的差异所在。你会觉得豁然开朗，由衷地感叹这才是控制版本的最佳方式。</p>
+<p>没错，是有点异样的感觉——<a title="http://en.wikipedia.org/wiki/Source_Code_Control_System" href="http://en.wikipedia.org/wiki/Source_Code_Control_System" target="_top">从1972年至今</a>，所有人关注的都是怎么管理版本，而今天，人们突然要去关注更改本身了，能不感觉异样吗？而且，关注更改解决了一个非常重要的问题：合并分支代码。</p>
+<p>这一点最重要了。没错，在长达10年的时间里，我们深刻地体会到，这一点对提高开发效率最为重要。重要到了什么程度呢？重要到在我今天最后一次谈软件时，必须要反复强调它。好了，如果你只想记住一句话，那就记住下面这句：</p>
+<p>在管理更改而非管理版本时，合并很容易做到，你可以根据工作需要随时创建分支，因为合并已经是小菜一碟了。</p>
+<p>记不清有多少个使用Subversion的用户，曾对我说过下面这番话：“用它创建分支代码的时候，没什么问题。但是，等到要把分支合并到一块时，那个费劲啊，我们不得不手工重新应用每一次更改。我们发誓，这种蠢事一辈子也不会再干了。结果，我们想出了一个开发软件的新主意，就是用if语句，不用分支。”</p>
+<p>有时候，他们在提到自己发明的这种一个主干的做法时，甚至还有几分得意。好像弥补了自己版本控制工具的不足，就可以流芳百世了。</p>
+<p>使用分布式版本控制系统，合并简单，还不会出错。所以，你可以创建一个稳定的分支、一个开发分支，还可以为QA团队创建一个长期使用的分支，以便在实际部署之前进行测试。当然，还可以创建一个临时分支，用它来验证各种想法，观察结果。</p>
+<p>这一点太重要了，怎么强调它都不算过分。自从我10年前开始写博客以来，这恐怕是我笔下的软件开发技术领域中最大的进步了。</p>
+<p>或者，可以换一种说法，如果我要放弃Mercurial，除非是我想再使用C++。</p>
+<p>如果你还在使用Subversion，停止使用。马上停止使用。Subversion＝水蛭。Mercurial＝抗生素。我们现在有更好的技术了。</p>
+<p>很多人在没有完全理解这种新程序模型的情况下，往往会盲目地使用Mercurial，而这容易让人觉得它有问题，不可靠。为此，我专门写了<a title="http://hginit.com/" href="http://hginit.com/" target="_top">一套Mercurial教程，叫做HgInit</a><sup><a name="source2" href="#note2">[注2]</a></sup>。</p>
+<p>如今，要是有人问我那次聊DVCS时为什么要贬低DVCS，我会告诉他们那是我精心设计一个圈套，我是在放烟雾弹，目的是要迷惑我的老朋友和老竞争对手埃里克——他在开发一个非分布式的版本控制系统。就像上一次他要卖bug追踪软件一样。那一次，为了惩罚他，我们用一个特制的信封寄给他一个非常值钱的Fog Creek双肩背包。让他觉得我们会在圣诞节的时候，也会把这么值钱的背包作为圣诞礼物，送给所有FogBugz软件的客户。</p>
+<p>我的博客写到今天，时间已经够长了。10年来，大家能够坚持阅读我写的文章，是我莫大的荣幸。这个博客的读者群能达到今天这个规模，是我当初做梦也想不到的。无论你是谁，是花自己的时间把我的文章翻译成40多种语言的那几百位志愿者中的一员，是给我写过电子邮件的22 894位朋友中的一位，是订阅了我的邮件简报的50 838名订阅者之一，还是每年2 262 384位访问这个站点并阅读了我写的1 067篇文章中哪怕只言片语的读者中的一位，我都要由衷地感谢你，感谢你对我的关注。</p>
+<div style="border-top: 1px solid rgb(221, 221, 221); padding: 0pt; margin-top: 30px; width: 80%;"><a style="display: block; margin-top: 10px;" name="note1" href="#source1">注1：Mecurial是“水银”的意思。</a><a style="margin: 0pt; display: block;" name="note2" href="#source2">注2：Hg是汞的化学元素符号，而Init是“初始化”的意思。因此，HgInit可以理解成“Mecurial入门”。</a></div>
+											</div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+			<a href="http://www.cn-cuckoo.com/2010/03/20/distributed-version-control-is-here-to-stay-baby-1436.html#comments" class="commentmeta" title="乔尔谈软件终结篇：分布式版本控制系统的时代到来了 上的评论">有 9 条评论</a> 		</div>
+		</div>
+	</div>
+
+		<div class="navigation">
+		<div class="alignleft"><a href="http://www.cn-cuckoo.com/page/2">« 看看更早的</a></div>
+		<div class="alignright"></div>
+	</div>
+
+	</div>
+</div>
+
+<div id="sidebar_left" class="sidebar">
+
+	<div id="logo">
+		<h3><a indepth="true" href="default_002.html">为之漫笔</a><!--alternative color <a class="logoalt" href="/"></a> --></h3>
+	</div>
+
+	<div id="aboutme">
+		<ul>
+			<li style="line-height: 1.6; color: rgb(102, 102, 102);">
+<!-- 				<img src="http://www.cn-cuckoo.com/wordpress/wp-content/themes/genkitheme/images/lsf_20091002.jpg" alt="About me" />
+ -->				
+					<img src="pro_js_2nd.jpg" alt="《JavaScript高级程序设计（第2版）》" title="正在翻译《JavaScript高级程序设计（第2版）》" height="200px" width="200px">
+					本博客专注于Web前后端技术、移动平台开发技术和技术翻译。			</li>
+		</ul>
+	</div>
+
+<!-- 	<div id="navcontainer">
+		<ul id="navlist">
+			<li class="page_item page-item-1080"><a href="http://www.cn-cuckoo.com/errata-for-chinese-language-edition-of-dojo-the-definitive-guide" title="《Dojo权威指南》勘误">《Dojo权威指南》勘误</a></li>
+<li class="page_item page-item-1572"><a href="http://www.cn-cuckoo.com/projs2" title="《JavaScript高级程序设计（第2版）》勘误">《JavaScript高级程序设计（第2版）》勘误</a></li>
+<li class="page_item page-item-459"><a href="http://www.cn-cuckoo.com/the-page-of-translating-thesis-of-hakon-wium-lie-2" title="层叠样式表">层叠样式表</a></li>
+<li class="page_item page-item-239"><a href="http://www.cn-cuckoo.com/errata-for-chinese-language-edition-of-advanced-dom-scripting" title="《JavaScript DOM高级程序设计》勘误">《JavaScript DOM高级程序设计》勘误</a></li>
+<li class="page_item page-item-240"><a href="http://www.cn-cuckoo.com/errata-for-chinese-language-edition-of-css-web-site-design" title="《CSS Web站点设计手册》勘误">《CSS Web站点设计手册》勘误</a></li>
+		</ul>
+	</div> -->
+
+				<h2>最新文章</h2>		<ul>
+				<li><a href="http://www.cn-cuckoo.com/2010/04/20/are-you-one-of-the-10-percent-of-programmers-who-can-write-a-binary-search-1530.html" title="你是那10%可以实现二分查找算法的程序员吗？">你是那10%可以实现二分查找算法的程序员吗？ </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/04/18/two-problems-with-android-developin-1521.html" title="Android开发问题二则">Android开发问题二则 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/04/18/make-a-android-develop-environment-1512.html" title="构建Android开发环境">构建Android开发环境 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/04/09/john-resig-on-advanced-javascript-to-improve-your-web-app-1493.html" title="John Resig谈改进Web应用的高级JavaScript技术[待续]">John Resig谈改进Web应用的高级JavaScript技术[待续] </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/03/20/distributed-version-control-is-here-to-stay-baby-1436.html" title="乔尔谈软件终结篇：分布式版本控制系统的时代到来了">乔尔谈软件终结篇：分布式版本控制系统的时代到来了 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/02/28/a-letter-to-translaters-from-liujiangce-1427.html" title="转载《翻译的艺术——致译者的一封信》">转载《翻译的艺术——致译者的一封信》 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/02/06/professional-javascript-developers-wrox-programmer-sample-chapter-1411.html" title="经典名著，精选样章">经典名著，精选样章 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/01/22/what-makes-a-good-browser-api-1391.html" title="评判浏览器API好坏的标准是什么">评判浏览器API好坏的标准是什么 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/01/17/professional-javascript-for-web-developers-2nd-edition-foreword-1373.html" title="《JavaScript高级程序设计（第2版）》序">《JavaScript高级程序设计（第2版）》序 </a></li>
+				<li><a href="http://www.cn-cuckoo.com/2010/01/10/nicholas-c-zakas-talk-about-what-makes-a-good-front-end-engineer-1356.html" title="Nicholas C. Zakas谈怎样才能成为优秀的前端工程师">Nicholas C. Zakas谈怎样才能成为优秀的前端工程师 </a></li>
+				</ul>
+		
+	<!-- 译作推荐开始 -->
+	<h2>译作推荐</h2>
+	<ul style="margin: 0pt auto;">
+	<li>
+	<img src="zcover.jpg" alt="《jQuery基础教程(第2版)》" title="《jQuery基础教程(第2版)》">
+	</li>
+	<li>
+	<img src="zcover_001.jpg" alt="《JavaScript DOM高级程序设计》" title="《JavaScript DOM高级程序设计》">
+	</li>
+	<li>
+	<img src="zcover_002.jpg" alt="《写给大家看的CSS书(第2版)》" title="《写给大家看的CSS书(第2版)》">
+	</li>	
+	<li>
+	<img src="20702016-1_o.jpg" style="border: 1px solid rgb(221, 221, 221);" alt="《PHP经典实例（第二版）》" title="《PHP经典实例（第二版）》" width="159px">
+	</li>
+	<li>
+	<img src="zcover_003.jpg" alt="《Web界面设计》" title="《Web界面设计》" width="159px">
+	</li>
+	<li>
+	<img src="zcover_004.jpg" alt="《Dojo权威指南》" title="《Dojo权威指南》" width="159px">
+	</li>
+	</ul>
+	<!-- 译作推荐结束 -->
+</div>
+
+
+<div id="sidebar_right" class="sidebar">
+	
+	<div class="search">
+		<form method="get" id="searchform" action="http://www.cn-cuckoo.com/">
+		<input class="searchinput" value="" name="s" id="search_query" type="text">
+		<input class="searchbutton" value="搜下!" style="cursor: pointer;" type="submit">
+		</form>
+	</div>
+
+<h2>&nbsp;</h2><div id="calendar_wrap"><table id="wp-calendar" summary="日历">
+	<caption>2010年五月</caption>
+	<thead>
+	<tr>
+		<th abbr="星期一" scope="col" title="星期一">一</th>
+		<th abbr="星期二" scope="col" title="星期二">二</th>
+		<th abbr="星期三" scope="col" title="星期三">三</th>
+		<th abbr="星期四" scope="col" title="星期四">四</th>
+		<th abbr="星期五" scope="col" title="星期五">五</th>
+		<th abbr="星期六" scope="col" title="星期六">六</th>
+		<th abbr="星期天" scope="col" title="星期天">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td abbr="四月" colspan="3" id="prev"><a href="http://www.cn-cuckoo.com/2010/04" title="查看 四月 2010 的文章">« 四</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+	</tr>
+	<tr>
+		<td id="today">3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+	</tr>
+	<tr>
+		<td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+	</tr>
+	<tr>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+	</tr>
+	<tr>
+		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+	</tr>
+	<tr>
+		<td>31</td>
+		<td class="pad" colspan="6">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div>					<h2>最新评论</h2>			<ul id="recentcomments"><li class="recentcomments"><a href="http://www.ygchaoshi.com/" rel="external nofollow" class="url">小曾</a> 在 <a href="http://www.cn-cuckoo.com/2007/08/14/unobtrusive-javascript-progressive-enhancement-gracefully-degrade-82.html/comment-page-1#comment-2949">从几个与 DOM 脚本编程有关的术语翻译说起</a> 上的评论</li><li class="recentcomments"><a href="http://www.waasai.com/wp/?p=897" rel="external nofollow" class="url">40个实用的轻量级JavaScript库 « 80端口的简单幸福生活</a> 在 <a href="http://www.cn-cuckoo.com/2007/08/14/unobtrusive-javascript-progressive-enhancement-gracefully-degrade-82.html/comment-page-1#comment-2948">从几个与 DOM 脚本编程有关的术语翻译说起</a> 上的评论</li><li class="recentcomments"><a indepth="true" href="default_002.html" rel="external nofollow" class="url">为之漫笔</a> 在 <a href="http://www.cn-cuckoo.com/projs2/comment-page-1#comment-2947">《JavaScript高级程序设计（第2版）》勘误</a> 上的评论</li><li class="recentcomments">snandy 在 <a href="http://www.cn-cuckoo.com/projs2/comment-page-1#comment-2946">《JavaScript高级程序设计（第2版）》勘误</a> 上的评论</li><li class="recentcomments"><a href="http://www.ygchaoshi.com/" rel="external nofollow" class="url">小曾</a> 在 <a href="http://www.cn-cuckoo.com/2008/06/14/advanced-dom-scripting-simplified-chinese-available-for-preorder-237.html/comment-page-1#comment-2945">《JavaScript DOM高级程序设计》出版</a> 上的评论</li><li class="recentcomments"><a indepth="true" href="default_002.html" rel="external nofollow" class="url">为之漫笔</a> 在 <a href="http://www.cn-cuckoo.com/2010/01/10/nicholas-c-zakas-talk-about-what-makes-a-good-front-end-engineer-1356.html/comment-page-1#comment-2944">Nicholas C. Zakas谈怎样才能成为优秀的前端工程师</a> 上的评论</li><li class="recentcomments"><a indepth="true" href="default_002.html" rel="external nofollow" class="url">为之漫笔</a> 在 <a href="http://www.cn-cuckoo.com/2008/06/14/advanced-dom-scripting-simplified-chinese-available-for-preorder-237.html/comment-page-1#comment-2943">《JavaScript DOM高级程序设计》出版</a> 上的评论</li><li class="recentcomments"><a href="http://yslove.net/" rel="external nofollow" class="url">Y.Jiajia</a> 在 <a href="http://www.cn-cuckoo.com/2010/01/10/nicholas-c-zakas-talk-about-what-makes-a-good-front-end-engineer-1356.html/comment-page-1#comment-2942">Nicholas C. Zakas谈怎样才能成为优秀的前端工程师</a> 上的评论</li><li class="recentcomments"><a href="http://www.ygchaoshi.com/" rel="external nofollow" class="url">小曾</a> 在 <a href="http://www.cn-cuckoo.com/2008/06/14/advanced-dom-scripting-simplified-chinese-available-for-preorder-237.html/comment-page-1#comment-2941">《JavaScript DOM高级程序设计》出版</a> 上的评论</li><li class="recentcomments"><a href="http://www.ygchaoshi.com/" rel="external nofollow" class="url">小曾</a> 在 <a href="http://www.cn-cuckoo.com/2008/06/14/advanced-dom-scripting-simplified-chinese-available-for-preorder-237.html/comment-page-1#comment-2940">《JavaScript DOM高级程序设计》出版</a> 上的评论</li></ul>
+		<h2>文章类别</h2>		<ul>
+	<li class="cat-item cat-item-20"><a href="http://www.cn-cuckoo.com/category/web" title="查看 Web开发 下的所有文章">Web开发</a> (33)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.cn-cuckoo.com/category/ping-pong-ball" title="查看 乒乓球 下的所有文章">乒乓球</a> (4)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.cn-cuckoo.com/category/authorship" title="查看 原创 下的所有文章">原创</a> (109)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.cn-cuckoo.com/category/good-book" title="查看 好书 下的所有文章">好书</a> (40)
+</li>
+	<li class="cat-item cat-item-30"><a href="http://www.cn-cuckoo.com/category/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91" title="查看 移动开发 下的所有文章">移动开发</a> (2)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.cn-cuckoo.com/category/programming" title="查看 编程技术 下的所有文章">编程技术</a> (6)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.cn-cuckoo.com/category/translation" title="查看 翻译 下的所有文章">翻译</a> (78)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.cn-cuckoo.com/category/support" title="查看 译作支持 下的所有文章">译作支持</a> (14)
+</li>
+		</ul>
+<h2>功能</h2>			<ul>
+						<li><a href="http://www.cn-cuckoo.com/wordpress/wp-login.php">登录</a></li>
+			<li><a href="http://www.cn-cuckoo.com/feed" title="使用 RSS 2.0 同步此内容">文章 <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.cn-cuckoo.com/comments/feed" title="RSS 上的最近评论"><abbr title="Really Simple Syndication">RSS</abbr> 评论</a></li>
+			<li><a href="http://wordpress.org/" title="基于 WordPress，优美的个人信息发布平台。">WordPress.org</a></li>
+						</ul>
+
+
+<!-- Google朋友开始 -->
+	<div class="block">
+		<!-- Include the Google Friend Connect javascript library. -->
+		<script type="text/javascript" src="friendconnect.js"></script>
+		<!-- Define the div tag where the gadget will be inserted. -->
+		<div class="gadgets-gadget-container" id="div-5902779794494662373" style="border: 1px solid rgb(204, 204, 204); width: 200px; visibility: hidden;"><div id="gfc_iframe_1460025964_0_body"><iframe src="default_002_1.html" id="gfc_iframe_1460025964_0" name="gfc_iframe_1460025964_0" style="width: 100%;" allowtransparency="true" scrolling="no" frameborder="0"></iframe></div></div>
+		<!-- Render the gadget into a div. -->
+		<script type="text/javascript">
+		var skin = {};
+		skin['BORDER_COLOR'] = '#cccccc';
+		skin['ENDCAP_BG_COLOR'] = '#ffcc33';
+		skin['ENDCAP_TEXT_COLOR'] = '#333333';
+		skin['ENDCAP_LINK_COLOR'] = '#0000cc';
+		skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+		skin['CONTENT_BG_COLOR'] = '#ffffff';
+		skin['CONTENT_LINK_COLOR'] = '#0000cc';
+		skin['CONTENT_TEXT_COLOR'] = '#333333';
+		skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
+		skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+		skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+		skin['NUMBER_ROWS'] = '4';
+		google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+		google.friendconnect.container.renderMembersGadget(
+		 { id: 'div-5902779794494662373',
+		   site: '14605058873309130462' },
+		  skin);
+		</script>	
+	</div>		
+<!-- Google朋友结束 -->
+
+</div></div>
+
+<!-- please leave footer links intact -->
+<div id="footer">
+<a href="http://www.miibeian.gov.cn/" title="京ICP备06042259号">京ICP备06042259号</a> Copyright © 2007－2010. 
+<a indepth="true" href="default_002.html" title="为之漫笔">为之漫笔</a> | 
+设计者 » <a href="http://ericulous.com/2007/05/21/wp-theme-genkitheme/" title="Wordpress Themes">smashing wordpress themes</a></div>
+
+
+<div style="left: 5px; top: 15px;" id="divStayTopLeft">
+<div class="sidetab"><ul class="navlist">
+<li><a indepth="true" href="default_002.html" title="首页"><img src="home.gif" alt="首页" height="60" width="25"></a></li>
+<li><a href="#" title="返回页面上方"><img src="backtop.gif" alt="返回页面上方" height="60" width="25"></a></li>
+
+
+<!-- 
+<li><a href="http://www.cn-cuckoo.com/sitemap" title="Sitemap"><img src="http://www.cn-cuckoo.com/wordpress/wp-content/themes/genkitheme/images/sitemap.gif" width="25" height="60" alt="Sitemap"  /></a></li><li><a href="http://www.cn-cuckoo.com/contact" title="Contact Me"><img src="http://www.cn-cuckoo.com/wordpress/wp-content/themes/genkitheme/images/contact.gif" width="25" height="60" alt="Contact" /></a></li><li class="sidetab_alt"><a href="http://www.cn-cuckoo.com/feed" title="Subscribe to Feed"><img src="http://www.cn-cuckoo.com/wordpress/wp-content/themes/genkitheme/images/blank.gif" width="25" height="25" alt="Feed" /></a></li> 
+-->
+
+</ul></div>
+</div>
+<script src="ycnlib.js" type="text/javascript"> </script>
+<script src="jquery.min.js" type="text/javascript"> </script>
+<script>
+var href = window.location ? window.location.href : document.location.href;
+if (href.length == 25){
+	$(function(){
+		var note = function(timer){
+			var sitenote = $('#sitenote');
+			setTimeout(function(){
+				sitenote.show('fast',function(){
+					setTimeout(function(){
+						sitenote.hide('fast',function(){
+							$('body').prepend('<span id="hover" style="position:absolute;left:50px;top:2px;cursor:pointer;color:#fff;">没看清刚才的提示吗？</span>');
+							$('#hover').hover(function(){
+								note(100);
+							},function(){
+								$(this).empty()
+							})
+						});
+					},10000);
+				});
+			},timer);
+		}
+		note(5000);
+	});
+}
+</script>
+<!-- 
+<script>
+ycnlib.require("http://cn.yimg.com/i/lib/hilighter/1_5_1/xyntaxhighlighter.css", 
+						"http://cn.yimg.com/i/lib/hilighter/1_5_1/shcore.js",
+						"http://cn.yimg.com/i/lib/hilighter/1_5_1/shbrushjscript.js",
+						"http://cn.yimg.com/i/lib/hilighter/1_5_1/shbrushxml.js", 
+						"http://cn.yimg.com/i/lib/hilighter/1_5_1/shbrushcss.js");
+
+addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制源码";
+	dp.sh.Toolbar.Commands.PrintSource.label = "打印";
+	dp.SyntaxHighlighter.ClipboardSwf = "http://cn.yimg.com/i/lib/hilighter/1_5_1/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+});
+</script>
+ -->
+<script type="text/javascript" src="genki.js"></script>
+
+<script src="urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-340212-4";
+urchinTracker();
+</script>
+
+</body></html>

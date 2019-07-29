@@ -1,0 +1,56 @@
+/* ::::: http://www.cn-cuckoo.com/wordpress/wp-content/themes/genkitheme/style.css ::::: */
+
+body { margin: 15px 15px 0pt 30px; padding: 0pt; background: rgb(235, 233, 219) url('bg.gif') repeat-x scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: rgb(51, 51, 51); font-family: "����",sans-serif; font-size: 75%; }
+a { color: rgb(33, 117, 188); text-decoration: none; }
+a:hover { color: rgb(255, 116, 0); }
+img { border: 0pt none ; }
+h1, h2, h3 { font-size: 1.5em; font-family: "����",Georgia,Tahoma,serif; font-weight: normal; letter-spacing: -1px; }
+#wrap { border-style: solid; border-color: rgb(204, 204, 204) rgb(187, 187, 187) rgb(187, 187, 187) rgb(204, 204, 204); border-width: 1px 2px 2px 1px; margin: 0pt; padding: 0pt 0pt 15px; background-color: rgb(255, 255, 255); float: left; width: 99%; }
+#divStayTopLeft { left: 5px; position: absolute; top: 15px; }
+.sidetab {  }
+.sidetab ul { margin: 15px 0pt 0pt; padding: 0pt; list-style-type: none; }
+.sidetab ul li { border-bottom: 0pt none; padding: 0pt; margin-bottom: 0pt; }
+.sidetab a { background: transparent url('bg_sidetab.gif') no-repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; height: 60px; padding-bottom: 6px; width: 25px; }
+.sidetab a:link, .navlist a:visited { color: rgb(85, 85, 85); text-decoration: none; }
+.sidetab a:hover { background: transparent url('bg_sidetab.gif') no-repeat scroll 0px -70px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#contentwrapper { float: left; width: 100%; }
+#content { padding: 1em 1.5em; overflow: hidden; font-size: 1.15em; margin-right: 440px; line-height: 1.8; }
+.entrytitle h2 { padding: 0pt; clear: both; font-size: 2em; margin-top: 2em; }
+.entrytitle h2 a { color: rgb(180, 194, 75); }
+.entrytitle h2 a:hover { color: rgb(88, 187, 235); }
+.entrytitle h3 { color: rgb(153, 153, 153); font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
+.post { margin-bottom: 3em; }
+.entrymeta { clear: both; margin-top: 1em; }
+.commentmeta { background: transparent url('comment.gif') no-repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; padding-left: 20px; }
+.navigation {  }
+.alignright { float: right; }
+.alignleft { float: left; }
+#sidebar_left { float: left; margin-left: -440px; padding-top: 10px; width: 200px; }
+#sidebar_right { float: left; margin-left: -220px; padding-top: 20px; width: 200px; }
+.sidebar { font-size: 1em; }
+.sidebar h2 { margin: 1em 0pt 0pt; color: rgb(255, 116, 0); font-size: 1.6em; }
+.sidebar a { color: rgb(0, 153, 255); font-weight: bold; }
+.sidebar a:hover { color: rgb(85, 85, 85); }
+.sidebar ul { margin: 0pt; padding: 0pt; list-style-type: none; }
+.sidebar ul li { border-bottom: 1px dotted rgb(221, 221, 221); padding: 0.3em; background-color: rgb(250, 250, 250); margin-bottom: 0.3em; }
+.searchinput { border: 1px solid rgb(195, 217, 255); padding: 3px; width: 135px; }
+.searchbutton { border: 1px solid rgb(195, 217, 255); margin: 0pt; padding: 2px; background: rgb(240, 123, 5) none repeat scroll 0% 0%; color: rgb(255, 255, 255); -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#aboutme { margin-top: 15px; min-height: 80px; }
+#aboutme ul li { border: 0pt none ; background-color: rgb(255, 255, 255); }
+#aboutme img { border: 0pt none ; float: left; padding-right: 15px; }
+#navcontainer a:link, .navlist a:visited { color: rgb(64, 150, 238); text-decoration: none; }
+#logo h3 { margin: 0pt; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-size: 28px; font-weight: bold; letter-spacing: -3px; }
+#logo h3 a { color: rgb(205, 235, 139); }
+#logo h3 a:hover { color: rgb(255, 116, 0); }
+#footer { margin: 3px 0pt 0pt; padding: 0pt 10px 2px 0pt; color: rgb(153, 153, 153); float: right; font-size: 1em; }
+p img { padding: 0pt; max-width: 100%; }
+img.alignleft { margin: 0pt 7px 2px 0pt; padding: 4px; display: inline; }
+.aligncenter, div.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+#wp-calendar { width: 200px; }
+#sidebar_left #aboutme img { margin-bottom: 1em; }
+/* ::::: http://www.cn-cuckoo.com/wp-content/plugins/coolcode/coolcode.css ::::: */
+
+/* ::::: http://www.cn-cuckoo.com/wordpress/wp-content/plugins/social-dropdown/dropdown.css ::::: */
+
+.dropmenudiv { border: 0px none ; margin: 0px; padding: 4px 0px; position: absolute; z-index: 100; }
+.recentcomments a { margin: 0pt ! important; padding: 0pt ! important; display: inline ! important; }

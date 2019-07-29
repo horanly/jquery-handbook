@@ -1,0 +1,61 @@
+/* ::::: http://s2.wp.com/wp-content/themes/pub/andreas09/style.css?m=1265835000g&5 ::::: */
+
+body { margin: 0pt; padding: 0pt; background: rgb(139, 139, 139) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: rgb(48, 48, 48); font-family: Verdana,Tahoma,Arial,sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 76%; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; text-align: center; }
+a { font-weight: bold; text-decoration: none; }
+a:hover { color: rgb(128, 128, 128); text-decoration: underline; }
+p { margin: 0pt 0pt 15px; padding: 0px; line-height: 1.5em; }
+#container { margin: 0pt; padding: 0pt; color: rgb(48, 48, 48); min-width: 770px; text-align: left; width: 100%; }
+#sitename { margin: 0pt 20px 10px; color: rgb(255, 255, 255); height: 90px; text-align: left; }
+#sitename h1, #sitename h2 { margin: 0pt; padding: 0pt; font-weight: 400; }
+#sitename h1 { font-size: 2.4em; padding-top: 20px; }
+#sitename h1 a { color: rgb(255, 255, 255); text-decoration: none; letter-spacing: 5px; }
+#sitename h2 { font-size: 1.6em; }
+#wrap { padding: 0pt; clear: both; font-size: 0.9em; margin-top: 5px; }
+#mainmenu { margin: 0px; padding: 0px; clear: both; width: 100%; }
+#mainmenu ul.level1 { border-top: 1px solid rgb(255, 255, 255); border-bottom: 1px solid rgb(255, 255, 255); }
+#mainmenu ul { border-bottom: 1px solid rgb(255, 255, 255); margin: 0px; padding: 0pt 0pt 0pt 5px; background: rgb(176, 176, 176) url('menubg.jpg') repeat-x scroll left center; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#mainmenu li { padding: 0px; display: inline; line-height: 25px; margin-left: -4px; font-size: 0.9em; list-style-type: none; list-style-image: none; list-style-position: outside; text-transform: uppercase; }
+#mainmenu a { border-right: 1px solid rgb(176, 176, 176); padding: 6px 9px; text-decoration: none; }
+#mainmenu li.current a, #mainmenu li.current_page_item a { color: rgb(0, 0, 0); }
+#leftside, #rightside { margin: 0pt; padding: 0pt 10px 10px; width: 165px; }
+#leftside { float: left; margin-right: 10px; }
+#rightside { float: right; margin-left: 10px; }
+#leftside h2, #rightside h2 { border-bottom: 1px solid rgb(190, 191, 195); padding: 5px 5px 5px 0pt; font-size: 1.4em; margin-top: 10px; }
+#leftside ul, #rightside ul { margin: 0px; padding-left: 0px; }
+#leftside li, #rightside li { list-style-type: none; list-style-image: none; list-style-position: outside; }
+li.feed { padding: 2px 0pt 8px 20px; background: transparent url('rss.gif') no-repeat scroll left top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+li#recent-posts ul li, li#top-posts ul li { padding-bottom: 5px; }
+#content, #contentalt { border: 1px solid rgb(144, 144, 144); padding: 15px 20px 5px; background-color: rgb(250, 252, 255); color: rgb(42, 42, 42); }
+#content { margin: 0pt 200px; }
+#content h2 { font-size: 1.6em; color: rgb(96, 96, 96); }
+#footer { margin: 0pt; padding: 20px 0pt; background: rgb(139, 139, 139) url('footerbg.jpg') repeat-x scroll left top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; clear: both; color: rgb(0, 0, 0); font-size: 0.9em; font-weight: bold; text-align: center; width: 100%; }
+#footer a { color: rgb(208, 208, 208); font-weight: bold; }
+#searchform { margin-top: 10px; }
+#searchbox { border: 1px solid rgb(176, 176, 176); margin: 0pt 4px 0pt 0pt; background: rgb(240, 240, 240) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 160px; }
+#searchbutton { border: 1px solid rgb(176, 176, 176); background: rgb(240, 240, 240) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#searchbutton:hover { border: 1px solid rgb(132, 132, 132); background: rgb(232, 233, 234) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; cursor: pointer; }
+blockquote { border: 1px dashed rgb(176, 176, 176); margin: 30px; padding: 10px 10px 0pt; }
+blockquote p { margin: 0pt 0pt 10px; padding: 0px; }
+.category { border-bottom: 1px solid rgb(176, 176, 176); }
+.date { border-bottom: 1px solid rgb(176, 176, 176); margin-top: -10px; padding-top: 0px; }
+.bottomnavigation { border-top: 1px dashed rgb(176, 176, 176); margin: 30px 0pt 0pt; padding: 5px 0pt 30px; }
+.alignleft { float: left; text-align: left; }
+.alignright { float: right; text-align: right; }
+.post { margin: 0px; padding-top: 0px; padding-bottom: 10px; }
+.entry, .entrytext { overflow: hidden; }
+.clearingdiv { clear: both; height: 30px; width: 1px; }
+/* ::::: http://s2.wp.com/wp-content/themes/pub/andreas09/blue.css?m=1241529288g ::::: */
+
+#container { background: rgb(240, 240, 240) url('bodybg-blue.jpg') repeat-x scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+a { color: rgb(10, 143, 188); }
+#mainmenu a { color: rgb(10, 143, 188); }
+#mainmenu a:hover { background: transparent url('menuhover-blue.jpg') repeat-x scroll left center; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#mainmenu li.current a, #mainmenu li.current_page_item a { background: transparent url('menuhover-blue.jpg') repeat-x scroll left center; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+/* ::::: http://s0.wp.com/wp-content/themes/h4/global.css?m=1256671583g ::::: */
+
+table.recentcommentsavatar img.avatar { border: 0px none ; margin: 0pt; }
+table.recentcommentsavatar a { border: 0px none  ! important; background-color: transparent ! important; }
+td.recentcommentsavatartop { margin: 0px; padding: 0px 0px 1px; }
+td.recentcommentsavatarend { margin: 0px; padding: 0px 0px 1px; }
+td.recentcommentstexttop { border: medium none  ! important; padding: 0px 0px 0px 10px; }
+td.recentcommentstextend { border: medium none  ! important; padding: 0px 0px 2px 10px; }

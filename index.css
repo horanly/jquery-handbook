@@ -1,0 +1,33 @@
+/* ::::: http://jquery-api-zh-cn.googlecode.com/svn/trunk/style/jqueryapi.css ::::: */
+
+* { margin: 0pt; padding: 0pt; }
+body { background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); height: 100%; font-family: Arial,Helvetica,sans-serif; font-size: 12px; }
+.littletext { font-size: 10px; }
+#topnav { margin: 5px 10px; height: 10px; }
+.topnav { float: right; margin-left: 5px; font-size: 12px; color: rgb(255, 255, 255); }
+#header { margin: 0px auto; width: 728px; height: 5px; }
+hr { margin: 10px; }
+#foldandexpand { margin: 10px; position: relative; left: 150px; width: 400px; height: 30px; }
+#foldandexpand button { border: 1px solid rgb(89, 89, 89); margin: 0px 1px; }
+.mainmenu { position: absolute; left: 10px; width: 140px; color: rgb(255, 255, 255); }
+.menuitem, .categoryitem, .functionitem { padding: 7px 5px; overflow: hidden; height: 30px; text-indent: 20px; margin-bottom: -14px; cursor: pointer; }
+.menuitem { background-image: url('menuitem.png'); background-repeat: no-repeat; }
+.menuitem:hover { color: rgb(255, 153, 0); }
+.functionmenu { position: absolute; display: none; left: 150px; top: 0px; cursor: pointer; width: 221px; }
+.categoryitem { background-image: url('categoryitem.png'); background-repeat: no-repeat; font-weight: bold; }
+.category { display: none; }
+.functionitem { background-image: url('functionitem.png'); background-repeat: no-repeat; }
+.categoryitem:hover, .functionitem:hover { color: rgb(187, 187, 187); }
+.content { padding: 10px 20px; position: absolute; left: 231px; top: 0px; width: 350px; display: none; background-color: rgb(68, 136, 187); cursor: auto; }
+.content h1, .content h2, .content h3 { font-size: 12px; margin-bottom: 10px; }
+.content h1 { border-bottom: 1px solid rgb(204, 204, 204); font-size: 14px; padding-bottom: 2px; }
+.content h2 { padding: 3px; background-color: rgb(34, 102, 153); margin-top: 10px; }
+.content .desc { text-indent: 2em; font-size: 1.2em; margin-bottom: 10px; }
+.content .desc .longdesc { font-size: 0.9em; margin-top: 10px; }
+p.indent { text-indent: 2em; margin-top: 10px; }
+div.code { border: 1px solid rgb(255, 255, 255); padding: 5px; overflow: auto; background-color: rgb(34, 102, 153); word-wrap: break-word; margin-top: 10px; }
+.content hr { margin: 10px 0px 0px; }
+.content a:link { color: rgb(255, 255, 255); }
+.content a:visited { color: rgb(221, 221, 221); }
+.content a:hover { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); }
+.content a:active { color: rgb(221, 221, 221); }

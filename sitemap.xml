@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../sitemap.xsl" type="text/xsl" media="all"?>
+<site>
+<page file="index.html" text="jQuery 1.3 API 参考文档中文版" title="jQuery 1.3 API 参考文档中文版">
+<page file="default.html" text="Cloudream" title=""/>
+<page file="default_001.html" text="Ross Wan" title="Ross Wan's World!"/>
+<page file="default_002.html" text="为之漫笔" title="为之漫笔 » 本博客专注于Web前后端技术、移动平台开发技术和技术翻译。"/>
+</page>
+</site>

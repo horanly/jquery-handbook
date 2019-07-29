@@ -1,0 +1,4 @@
+http://jquery-api-zh-cn.googlecode.com/svn/trunk/index.html	index
+http://cloudream.name/	default
+http://mrwlwan.wordpress.com/	default_001
+http://www.cn-cuckoo.com/	default_002
